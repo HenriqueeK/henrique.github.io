@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <meta name="generator" content="">
-</head>
 
 <style>
 
@@ -145,6 +144,8 @@ body {
 
 
 </style>
+
+</head>
 <body>
 
     <section class="titulo">
