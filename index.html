@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Henrique Konrad</title>
     
 <style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: rgb(39, 36, 36);
@@ -18,29 +24,32 @@ body {
 
 .titulo {
   text-align: center;
+  padding-top: 20px;
 }
 
 .subtitulo {
   font-size: 1.1rem;
   font-weight: normal;
   color: #ccc;
-  padding: 20px;
+  padding: 16px 20px;
 }
 
 .objetos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 16px;
   flex-direction: column;
 }
 
 .objetos li {
   list-style: none;
   text-align: center;
-  font-size: 0.85rem;
-  color: #ccc;
-}
+  font-size: 0.8rem;
+  color: #aaa;
+  letter-spacing: 0.05em;
+
+} /*Seleciona todos os "li" dentro da classe "objetos"*/
 
 .sobre {
   font-size: 0.95rem;
@@ -48,99 +57,43 @@ body {
   color: #ddd;
   list-style: none;
   text-align: justify;
-  padding: 20px;
+  padding: 24px 20px;
 }
 
-.linkedin{
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-}
+.linkedin, .github, .instagram, .facebook, .email {
+    width: 48px;
+    height: 48px;
+}/*Permite introduzir o mesmo css em todas as classes, separando sua seleção por virgula "*/
 
-.github{
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-}
-
-.instagram{
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-}
-
-.facebook{
-    width: 80px;
-    height: 80px;
-    padding: 20px; 
-}
-
-.email{
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-}
-
-.borda{
+.borda, .bordagithub, .bordainstagram, .bordafacebook, .bordaemail {
     background-color: rgb(17, 17, 22);
-    width: 400px;
-    height: 120px;
+    width: min(400px, 90%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
-    border: 1px solid white;
+    gap: 8px;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
 }
 
-.bordagithub{
-    background-color: rgb(17, 17, 22);
-    width: 400px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    border: 1px solid white;
+.borda:hover, .bordagithub:hover, .bordainstagram:hover, .bordafacebook:hover, .bordaemail:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
 }
 
-.bordainstagram{
-    background-color: rgb(17, 17, 22);
-    width: 400px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    border: 1px solid white;
+.perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+  object-fit: cover;
+  display: block;
+  margin: 16px auto;
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
-
-.bordafacebook{
-    background-color: rgb(17, 17, 22);
-    width: 400px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    border: 1px solid white;
-}
-
-.bordaemail{
-    background-color: rgb(17, 17, 22);
-    width: 400px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    border: 1px solid white;
-}
-
 
 </style>
 
@@ -150,47 +103,49 @@ body {
     <section class="titulo">
     <header>
         <h1>Olá meu nome é Henrique Konrad 👋</h1>
+            <img class="perfil" src="https://github.com/HenriqueeK/henriqueek.github.io/blob/main/Foto-perfil/foto-site.jpeg?raw=true" alt="imagem de perfil">
+
         <h2 class="subtitulo">Aqui você pode encontrar alguns links do meu portfólio</h2>
     </header>
     </section>
 
     <section class="objetos">
     <section class="borda">
-        <li>Linkedin</li>
-            <a href="https://www.linkedin.com/in/henrique-konrad-72a86a319/">
-            <img class= "linkedin" src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="logo do Linkedin">
+        <li>LINKEDIN</li>
+            <a href="https://www.linkedin.com/in/henrique-konrad-72a86a319/" target="_blank"> <!-- target="_blank faz o link abrir em uma nova guia  -->
+            <img class="linkedin" src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="logo do Linkedin">
         </a>
     </section>
 
 
     <section class="bordagithub">
-        <li>Github</li>
-            <a href="https://github.com/HenriqueeK">
-            <img class="github"  src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo do Github">
+        <li>GITHUB</li>
+            <a href="https://github.com/HenriqueeK" target="_blank" target="_blank">
+            <img class="github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo do Github">
         </a>
     </section>
 
 
     <section class="bordainstagram">
-        <li>Instagram</li>
-            <a href="https://www.instagram.com/henriquee_konrad/">
-            <img class= "instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png" alt="Logo do Instagram">
+        <li>INSTAGRAM</li>
+            <a href="https://www.instagram.com/henriquee_konrad/" target="_blank">
+            <img class="instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png" alt="Logo do Instagram">
         </a>
     </section>
 
 
     <section class="bordafacebook">
-        <li>Facebook</li>
-            <a href="">
-            <img class= "facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png" alt="Logo do Facebook">
+        <li>FACEBOOK</li>
+            <a href="https://www.facebook.com/profile.php?id=100008630028066" target="_blank">
+            <img class="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png" alt="Logo do Facebook">
         </a>
     </section>
 
 
     <section class="bordaemail">
-        <li>E-mail</li>
-            <a href="mailto:henriquekonrad16@gmail.com">
-            <img class= "email" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png" alt="Logo do Gmail">
+        <li>E-MAIL</li>
+            <a href="mailto:henriquekonrad16@gmail.com" target="_blank">
+            <img class="email" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png" alt="Logo do Gmail">
         </a>
     </section>
 
